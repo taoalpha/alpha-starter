@@ -1,23 +1,29 @@
-# alpha-starter
+# xsDockerfiles
 
-[Docker Hub](https://hub.docker.com/r/taoalpha/alpha-starter)
+A collection of minmalist dev docker.
 
-[Alpine](https://hub.docker.com/_/alpine/) based container that provides useful tools when writing JS applications.
+Most would be [Alpine](https://hub.docker.com/_/alpine/) based.
 
 Thanks to [mhart](https://github.com/mhart/alpine-node) and its [alpine-node](https://hub.docker.com/r/mhart/alpine-node/).
 
 ```bash
-docker pull taoalpha/alpha-starter
+docker build <name-of-image> <path-to-dockerfile>
 ```
 
-## Embedded tools
+## Categories
+
+### Node
+
+#### Embedded tools
 
 * node 5.11.0
 * npm 3.8.0
-* zsh
+* zsh / git / vim
 
-
-## Embedded settings
+#### Embedded settings
 
 * vimrc from [amix](https://github.com/amix/vimrc)
 * zshrc from [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+
+### Web
+  Based on Node config, but specialy for web by adding my starter kit and install all npm packages to it.
