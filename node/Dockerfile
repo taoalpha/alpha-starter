@@ -3,6 +3,7 @@ MAINTAINER taoalpha
 
 ENV WORKSPACE /root
 
+
 RUN apk --update add \
     bash \
     vim \
@@ -11,9 +12,10 @@ RUN apk --update add \
     zsh \
     curl
 
-# Patching the launch command to goes through xvfb
 COPY scripts/initialized.sh ${WORKSPACE}/initialized.sh
 RUN sh ${WORKSPACE}/initialized.sh
+
+# may be use some other user instead of root
 
 # RUN addgroup staff
 # RUN adduser -D -g "" -G staff -s /bin/bash devuser
