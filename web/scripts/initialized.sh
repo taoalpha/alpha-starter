@@ -20,14 +20,15 @@ mv /tmp/a/my_configs.vim ~/.vim_runtime/
 git clone https://github.com/taoalpha/web-starter ~/web
 cd ~/web
 
+# no need for sass since I use less instead
 # install required compiling tools for node-sass
-apk add python make g++
+# apk add python make g++
 
 # install all basic packages
 npm install
 
 # clean the compiling tools
-apk del python make g++
+# apk del python make g++
 
 # clean the npm cache
 npm cache clean
